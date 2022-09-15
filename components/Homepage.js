@@ -6,13 +6,17 @@ const Homepage=()=>{
                 <div className="intro">
                     <h1 className="start">Save Twitter PC screenshots directly to your phone</h1>
                     <p className="smaller">One click.Receive it on your Google Photos app or Telegram</p>
-                    <button>Add to Chrome</button>
+                    <button>
+                        <img className='save_tweet_image' src='icons/chrome-24.png' alt="logo" />
+                        <p>Add to Chrome</p>
+                    </button>
                     <div className="available">
                         <p>Available via</p>
                         <div className="platform-img">
+                            <img src="icons/firefox-24.png" alt="firefox" />
                             <img src="icons/chrome-24.png" alt="chrome" />
                             <img src="icons/microsoft-edge-24.png" alt="edge" />
-                            <img src="icons/firefox-24.png" alt="firefox" />
+                            
                             <img src="icons/telegram-app-24.png" alt="telegram" />
                         </div>
                     </div>
@@ -48,6 +52,9 @@ const Homepage=()=>{
                     border-radius:10px;
                     font-weight:bold;
                     margin-bottom:20px;
+                    display:flex;
+                    align-items:center;
+                    justify-content:space-around;
 
                 }
                 .available{
