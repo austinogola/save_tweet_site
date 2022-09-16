@@ -1,4 +1,6 @@
 // import { BiHome,BiMailSend } from "react-icons/bi";
+import Image from "next/image"
+import Link from "next/link"
 
 const Footer=()=>{
     return(
@@ -6,7 +8,7 @@ const Footer=()=>{
             <div className="footerWrapper">
                 <div className="first">
                     <div className="logo">
-                        <img className='save_tweet_image' src='save_tweet-50.png' alt="logo" />
+                        <Image width={50} height={50} className='save_tweet_image' src='/save_tweet-50.png' alt="logo" />
                     </div>
                     <div className="take">
                         <p>Archive your favourite tweets. Repost , share</p>
@@ -19,15 +21,15 @@ const Footer=()=>{
                 <div className="second">
                     <div className="policies">
                         <h4>Policies</h4>
-                        <a href="/tos">Terms of Use</a><br />
-                        <a href="/privacy">Privacy Policy</a>
+                        <Link className='link' href="/contact"><a>Terms of Use</a></Link><br />
+                        <Link className='link' href="/privacy"><a>Privacy Policy</a></Link>
                     </div>
                     <div className="resources">
                         <h4>Resources</h4>
-                        <a href="/support">Support</a><br />
-                        <a href="/contact">Contact Us</a><br />
-                        <a href="/chrome">Chrome Web Store</a><br />
-                        <a href="/privacy">Telegram</a>
+                        <Link className='link' href="/support"><a>Support</a></Link><br />
+                        <Link className='link' href="/contact"><a>Contact Us</a></Link><br />
+                        <Link className='link' href="/support"><a>Chrome Web Store</a></Link><br />
+                        <Link className='link' href="/privacy"><a>Telegram</a></Link>
                     </div>
                     <div>
                         

@@ -1,4 +1,6 @@
 import { useRouter } from "next/router"
+import Image from "next/image"
+import Link from "next/link"
 
 const Navbar=()=>{
     const router=useRouter()
@@ -12,7 +14,7 @@ const Navbar=()=>{
             <div className="navbarWrapper">
                 <div className="logo" onClick={goHome}>
                     <div className="image">
-                        <img className='save_tweet_image' src='save_tweet-50.png' alt="logo" />
+                        <Image width={50} height={50} className='save_tweet_image' src='/save_tweet-50.png' alt="logo" />
                     </div>
                     <h2>Save Tweets</h2>
                 </div>
@@ -21,20 +23,22 @@ const Navbar=()=>{
                         <h3 className="dropbtn">Resources</h3>
                         <div className="dropdown-content">
                            <div>
-                                <a href="/telegram">Telegram</a>
-                                <a href="/firefox">Firefox</a>
-                                <a href="/edge">Edge</a>
+                                <Link href="/privacy">
+                                    <a>Telegram</a>
+                                </Link>
+                                <Link href="/support"><a>Firefox</a></Link>
+                                <Link href="/contact"><a>Edge</a></Link>
                            </div>
                            <div>
-                                <a href="/support">Support</a>
-                                <a href="/contact">Contact</a>
+                                <Link href="/support"><a >Support</a></Link>
+                                <Link href="/contact"><a>Contact</a></Link>
                            </div>
                         </div>
                     </div>
                 </div>
                 <div className="add">
                     <button>
-                        <img className='save_tweet_image' src='icons/chrome-24.png' alt="logo" />
+                        <Image width={24} height={24} className='save_tweet_image' src='/icons/chrome-24.png' alt="logo" />
                         <p>Add to Chrome</p>
                     </button>
                 </div>
