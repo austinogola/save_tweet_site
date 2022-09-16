@@ -1,9 +1,10 @@
 import Navbar from "../components/Navbar"
 
-const Privacy=()=>{
+const Tos=()=>{
     return(
-        <div className="Privacy">
+        <div className="Tos">
             <Navbar/>
+            
             <style jsx>
                 {`
                     
@@ -14,4 +15,4 @@ const Privacy=()=>{
 }
 
 
-export default Privacy
+export default Tos

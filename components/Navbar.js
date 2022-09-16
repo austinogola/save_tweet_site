@@ -1,10 +1,16 @@
-
+import { useRouter } from "next/router"
 
 const Navbar=()=>{
+    const router=useRouter()
+
+    const goHome=(e)=>{
+        
+        router.push('/')
+    }
     return(
         <div className="Navbar">
             <div className="navbarWrapper">
-                <div className="logo">
+                <div className="logo" onClick={goHome}>
                     <div className="image">
                         <img className='save_tweet_image' src='save_tweet-50.png' alt="logo" />
                     </div>
@@ -15,13 +21,13 @@ const Navbar=()=>{
                         <h3 className="dropbtn">Resources</h3>
                         <div className="dropdown-content">
                            <div>
-                                <a href="#">Telegram</a>
-                                <a href="#">Firefox</a>
-                                <a href="#">Edge</a>
+                                <a href="/telegram">Telegram</a>
+                                <a href="/firefox">Firefox</a>
+                                <a href="/edge">Edge</a>
                            </div>
                            <div>
-                                <a href="">Support</a>
-                                <a href="">Contact</a>
+                                <a href="/support">Support</a>
+                                <a href="/contact">Contact</a>
                            </div>
                         </div>
                     </div>
@@ -40,6 +46,11 @@ const Navbar=()=>{
                         padding:10px;
                         padding-left:30px;
                         padding-right:30px;
+                        box-shadow:0px 3px 10px 0px rgba(0,0,0,0.2);
+                        position:sticky;
+                        width:100%;
+                        z-index: 1;
+                        background-color:#FDFBFF;
                     }
                     .navbarWrapper{
                         display:flex;
@@ -48,6 +59,8 @@ const Navbar=()=>{
                     .logo{
                         display:flex;
                         align-items:center;
+                        cursor:pointer;
+
                     }
                     .image{
                        margin-right:10px;
