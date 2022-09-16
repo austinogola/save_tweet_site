@@ -21,7 +21,7 @@ const Footer=()=>{
                 <div className="second">
                     <div className="policies">
                         <h4>Policies</h4>
-                        <Link className='link' href="/contact"><a>Terms of Use</a></Link><br />
+                        <Link className='link' href="/tos"><a>Terms of Use</a></Link><br />
                         <Link className='link' href="/privacy"><a>Privacy Policy</a></Link>
                     </div>
                     <div className="resources">
